@@ -134,3 +134,4 @@ AUTH_USER_MODEL="accounts.CustomUser"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 CRISPY_ALLOWED_TEMPLATE_PACK ="bootstrap5"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

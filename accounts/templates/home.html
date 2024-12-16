@@ -5,10 +5,13 @@
 {% if user.is_authenticated %}
 <p>Hi {{user.username}}</p>
 
+<a class="btn btn-primary" href="{% url 'article_new' %}" role="button">Create New Article</a>
+<a class="btn btn-primary" href="{% url 'article_list' %}" role="button">View All Article</a>
 <form method="POST" action="{% url 'logout' %}">
     {% csrf_token %}
     <button type="submit">Logout</button>
 </form>
+
 {% else %}
     <p>Please log in to access this page.</p>
     <a href="{% url 'login' %}">Login</a> 

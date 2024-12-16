@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="article-entry">
+    <h2>{{article.title}}</h2>
+    <p>by {{article.author}}</p>
+    <p>{{title.body}}</p>
+</div>
+<div>
+    <a class="btn btn-primary" href="{% url 'article_edit' article.pk %}" role="button">Edit</a>
+    <a class="btn btn-danger" href="{% url 'article_delete' article.pk %}" role="button">DELETE</a>
+</div>
+<div>
+    <p>Back to  <a class="btn btn-success" href="{% url 'article_list' %}" role="button">ALL ARTICLES</a> </p>
+</div>
+{% endblock content %}
